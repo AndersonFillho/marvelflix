@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/home.css">
+    <link rel="stylesheet" href="style/navbar.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/styleglobal.css">
+    <link rel="stylesheet" href="style/responsive.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="shortcut icon" href="img/favicon.jpg" />
+    <title>MARVELFLIX</title>
+</head>
+
+<div class="fundo-externo">
+    <div class="fundo-tela">
+        <img src="img/background.png" alt="">
+    </div>
+</div>
+
+<header id="separador-navbar">
+
+    <nav id="nav-bar" class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="home.html"><img src="img/logo.png" alt="Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span id="nav-bar-span" class="navbar-toggler-icon">=</span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link menu" href="home.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu" href="login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu" href="cadastro.html">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu" href="contato.html">Contact</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"> <a href="filmes.html">🔍
+                        Search</a> </button>
+            </form>
+        </div>
+    </nav>
+
+</header>
+
+
+<body>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div id="carrosel-filme" class="carousel-inner">
+            <div id="main-banner" class="carousel-item active">
+                <img class="imagem-carrosel"
+                    src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/B528A26FB4EADADDD4EFECDEF4EA6E4DE03C8D5284014D75CBCBB26ACDDFFAAA/scale?width=1440&aspectRatio=1.78&format=jpeg"
+                    class="d-block w-100" alt="...">
+                <div id="main-banner-content">
+                    <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/901F41DA50C311B4C362CCC8C50A05D3B9F338AFF27619A30B4E81250EE28704/scale?width=1440&aspectRatio=1.78"
+                        alt="...">
+                </div>
+            </div>
+            <div id="main-banner" class="carousel-item">
+                <img class="imagem-carrosel"
+                    src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/2928F61A6F68664E7DA3FFEC7FD352D4805569801B1676CDD9FB83A16FDFE81F/scale?width=1440&aspectRatio=1.78&format=jpeg"
+                    class="d-block w-100" alt="...">
+                <div id="main-banner-content">
+                    <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/DAE283CC12F714FF7B7BCB722E1345EEAD59321E4677D3FC08B9BB487CBC9E11/scale?width=1440&aspectRatio=1.78"
+                        alt="">
+                </div>
+            </div>
+            <div id="main-banner" class="carousel-item">
+                <img class="imagem-carrosel"
+                    src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/BF2AB42F4F84C19ACE490AFEFDFDDE2CE9E46BC87FC2281A62B81D2A5DC76878/scale?width=1440&aspectRatio=1.78&format=jpeg"
+                    class="d-block w-100" alt="...">
+                <div id="main-banner-content">
+                    <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/C6B5FA9919CDC2B6CA450ECFD6025AA98416C55300513A4EE9CDBEE51320BBE3/scale?width=1440&aspectRatio=1.78"
+                        alt="....">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- FILMES COM MODAL/API -->
+    <div class="container-filme">
+        <picture class="row d-flex justify-content-around container-movie-poster">
+            <img src=" https://m.media-amazon.com/images/M/MV5BMjM2NTQ5Mzc2M15BMl5BanBnXkFtZTgwNTcxMDI2NTE@._V1_SX300.jpg"
+                class="img-thumbnail col-12 col-md-3 shadow p-2 mb-5 bg-white rounded movie-image" id="imgPoster"
+                data-toggle="modal" data-target="#myModal" alt="...">
+            <img src="https://m.media-amazon.com/images/M/MV5BMjMyNDkzMzI1OF5BMl5BanBnXkFtZTgwODcxODg5MjI@._V1_SX300.jpg"
+                class="img-thumbnail col-12 col-md-3 shadow p-2 mb-5 bg-white rounded movie-image" id="imgPoster"
+                data-toggle="modal" data-target="#myModal" alt="...">
+            <img src="https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_SX300.jpg"
+                class="img-thumbnail col-12 col-md-3 shadow p-2 mb-5 bg-white rounded movie-image" id="imgPoster"
+                data-toggle="modal" data-target="#myModal" alt="...">
+        </picture>
+    </div>
+
+    <!--Start modal-->
+    <div class="modal" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Search data</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modalBody">
+                    <p>Waiting results</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End modal-->
+
+    <!-- VINGADORES -->
+
+    <div id="responsive-card" class="d-flex justify-content-around p-5">
+        <div id="card-filmes" class="card" data-toggle="modal" data-target="#exampleModal" style="width: 18rem;">
+            <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/3DC9C50A3262012C34EE2243CB931A9B0135BDB58B9018A3D292E00CD4715237/scale?width=400&aspectRatio=1.78&format=jpeg"
+                class="card-img-top" alt="...">
+        </div>
+
+        <div id="card-filmes" class="card" data-toggle="modal" data-target="#exampleModal" style="width: 18rem;">
+            <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/C4A02D5F54825D776DF63694E10498B2E75D5E28C9FB6D8AAA4506E77412FBFF/scale?width=400&aspectRatio=1.78&format=jpeg"
+                class="card-img-top" alt="...">
+        </div>
+
+        <div id="card-filmes" class="card" data-toggle="modal" data-target="#exampleModal" style="width: 18rem;">
+            <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/385C9674CE3187F4002A4049C4058A82BAE812EE318CB6A16DFBAFC36B4C0C80/scale?width=400&aspectRatio=1.78&format=jpeg"
+                class="card-img-top" alt="...">
+        </div>
+
+        <div id="card-filmes" class="card" data-toggle="modal" data-target="#exampleModal" style="width: 18rem;">
+            <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/78808440059F7561ECAC91F356492B3A575A836A3A7641F359D98E946C8B4F0F/scale?width=400&aspectRatio=1.78&format=jpeg"
+                class="card-img-top" alt="...">
+        </div>
+    </div>
+
+    <!-- HOMEM DE FERRO -->
+    <div id="responsive-card" class="d-flex justify-content-around p-5">
+        <div id="card-filmes" class="card" data-toggle="modal" data-target="#exampleModal" style="width: 18rem;">
+            <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/0773F0416F21F3BA8E24EC50994862FE8CA49C292AA1604D30A088644F4C7388/scale?width=400&aspectRatio=1.78&format=jpeg"
+                class="card-img-top" alt="Homem de ferro1">
+        </div>
+
+        <div id="card-filmes" class="card" data-toggle="modal" data-target="#exampleModal" style="width: 18rem;">
+            <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/31C2B8B3C0EE24A4DD47AED190ACF9BF42639F75502076D7AC9D2CB4213C8EC2/scale?width=400&aspectRatio=1.78&format=jpeg"
+                class="card-img-top" alt="...">
+        </div>
+
+        <div id="card-filmes" class="card" data-toggle="modal" data-target="#exampleModal" style="width: 18rem;">
+            <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/85C4BBB195553580801EED0DA28A97A9C65CB77AC6EA170B855AEB5FF997B9A3/scale?width=400&aspectRatio=1.78&format=jpeg"
+                class="card-img-top" alt="...">
+        </div>
+
+        <div id="card-filmes" class="card" data-toggle="modal" data-target="#exampleModal" style="width: 18rem;">
+            <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/D7C8C013D21C8D5E1076743005C54C300BE1CD931C638944921C211430FA99BD/scale?width=400&aspectRatio=1.78&format=jpeg"
+                class="card-img-top" alt="...">
+        </div>
+    </div>
+
+    <!-- Capitão america -->
+    <div id="responsive-card" class="d-flex justify-content-around p-5">
+        <div id="card-filmes" class="card" data-toggle="modal" data-target="#exampleModal" style="width: 18rem;">
+            <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/B12DD3087303FA9E54EF3AF96F9CB1FCDA336CA8420B8D71DB4469412F7651B2/scale?width=400&aspectRatio=1.78&format=jpeg"
+                class="card-img-top" alt="...">
+        </div>
+
+        <div id="card-filmes" class="card" data-toggle="modal" data-target="#exampleModal" style="width: 18rem;">
+            <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/1630F4D7EBA7F4125407F66EDAB7E7330C2AD9DE9E4981B33A517DD2E837B13C/scale?width=400&aspectRatio=1.78&format=jpeg"
+                class="card-img-top" alt="...">
+        </div>
+
+        <div id="card-filmes" class="card" data-toggle="modal" data-target="#exampleModal" style="width: 18rem;">
+            <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/7CAF221E8CCD8CF60C8554DA65577700270B57C6FEDEF1EC7D481F3D5654CB46/scale?width=400&aspectRatio=1.78&format=jpeg"
+                class="card-img-top" alt="...">
+        </div>
+
+        <div id="card-filmes" class="card" data-toggle="modal" data-target="#exampleModal" style="width: 18rem;">
+            <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/900A9CD22ADE100EA3DE149B504725879941FDB8C0DB2AF5C12A5A79CDD02FCB/scale?width=400&aspectRatio=1.78&format=jpeg"
+                class="card-img-top" alt="...">
+        </div>
+    </div>
+
+
+    <!-- <footer id="footer">
+        <span class="copy">Feito por Anderson Ferreira &copy; MarvelFlix 2020 </span>
+    </footer> -->
+</body>
+
+
+<script src="script/modal/ControllerInfos.js"></script>
+<script src="script/modal/ModelInfos.js"></script>
+<script src="script/modal/ViewInfos.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+
+</html>

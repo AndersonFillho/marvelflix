@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/navbar.css">
+  <link rel="stylesheet" href="style/cadastro.css">
+  <link rel="stylesheet" href="style/footer.css">
+  <link rel="stylesheet" href="style/styleglobal.css">
+  <link rel="stylesheet" href="style/responsive.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="shortcut icon" href="img/favicon.jpg" />
+  <title>MARVELFLIX</title>
+</head>
+
+<div class="fundo-externo">
+  <div class="fundo-tela">
+    <img src="img/background.png" alt="">
+  </div>
+</div>
+
+<header>
+
+  <nav id="nav-bar" class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="home.html"><img src="img/logo.png" alt="Logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span id="nav-bar-span" class="navbar-toggler-icon">=</span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link menu" href="home.html">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link menu" href="login.html">Login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link menu" href="cadastro.html">Register</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link menu" href="contato.html">Contact</a>
+        </li>
+    </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"> <a href="filmes.html">🔍 Search</a>
+        </button>
+      </form>
+    </div>
+  </nav>
+
+</header>
+
+<body>
+
+
+
+  <form id="container" class="border border-secondary d-flex justify-content-center align-items-center pt-3 pb-3 m-5">
+    <div class="h-25 d-inline-block align-items-center">
+      <div class="form-row">
+        <div class="form-group col-md-6 is-invalid">
+          <label for="validationTextarea">Name</label>
+          <input type="text" class="form-control" id="nome" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="sobrenome">Surname</label>
+          <input type="text" class="form-control" id="sobrenome">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="exemplo@gmail.com">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Password</label>
+          <input type="password" class="form-control" id="inputPassword4" required>
+        </div>
+        <div id="paragrafo" class="form-group col-md-6">
+          <label for="confirmar-senha">Confirm password</label>
+          <input type="password" class="form-control" id="confirmar-senha" required>
+          <p>Confirm your password here</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="cep">CEP</label>
+        <input name="cep" type="text" class="form-control" id="cep" placeholder="00000-000" required
+          onblur="pesquisacep(this.value);">
+      </div>
+      <div class="form-group">
+        <label for="inputAddress">Address</label>
+        <input name="rua" type="text" class="form-control" id="rua" placeholder="Rua exemplo...">
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">Neighborhood</label>
+        <input name="bairro" type="text" class="form-control" id="bairro" placeholder="Apartamento...">
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputCity">City</label>
+          <input name="cidade" type="text" class="form-control" id="cidade">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputState">State</label>
+          <select name="uf" id="uf" class="form-control">
+            <option selected>State...</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="numero">Number</label>
+          <input type="number" class="form-control" id="numero">
+        </div>
+      </div>
+      <div class=" form-group custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" id="customSwitch1" required>
+        <label class="custom-control-label" for="customSwitch1">Terms of use</label>
+      </div>
+      <button id="botao-cadastro" type="submit" class="btn btn-primary mb-2">Register</button>
+    </div>
+  </form>
+
+  <!-- <footer id="footer">
+    <span class="copy">Feito por Anderson Ferreira &copy; MarvelFlix 2020 </span>
+  </footer> -->
+
+</body>
+
+<script src="API/cep.js"></script>
+
+</html>

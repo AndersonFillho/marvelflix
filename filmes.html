@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/navbar.css">
+    <link rel="stylesheet" href="style/filme.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/styleglobal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="shortcut icon" href="img/favicon.jpg" />
+    <title>MARVELFLIX</title>
+</head>
+
+<div class="fundo-externo">
+    <div class="fundo-tela">
+        <img src="img/background.png" alt="">
+    </div>
+</div>
+
+<header>
+
+    <nav id="nav-bar" class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="home.html"><img src="img/logo.png" alt="Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span id="nav-bar-span" class="navbar-toggler-icon">=</span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link menu" href="home.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu" href="login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu" href="cadastro.html">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu" href="contato.html">Contact</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"> <a href="filmes.html">🔍
+                        Search</a> </button>
+            </form>
+        </div>
+    </nav>
+
+</header>
+
+<body>
+
+    <div id="container-filme" class="">
+        <div class="input-group mb-3 search-input" id='entrada'>
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Digite o filme</span>
+            </div>
+            <input type="text" class="form-control" id="textInput" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default">
+        </div>
+        <!-- RESULTADO PESQUISA -->
+        <section>
+            <h1 class="d-flex justify-content-start popular-movies title-popular-movie">Results</h1>
+            <div class="container">
+                <picture class="row d-flex justify-content-around container-movie-poster" id="picture">
+
+                </picture>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="modal fade" id="ModalScrollable" tabindex="-1" role="dialog" aria-labelledby="ModalScrollableTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalScrollableTitle"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="template">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- <footer id="footer">
+        <span class="copy">Feito por Anderson Ferreira &copy; MarvelFlix 2020 </span>
+    </footer> -->
+
+</body>
+
+<script src="script/API-filme/modal_api/search_page_main.js"></script>
+<script src="script/API-filme/modal_api/SearchModels.js"></script>
+<script src="script/API-filme/modal_api/SearchViews.js"></script>
+<script src="script/API-filme/modal_api/SearchController.js"></script>
+<script src="script/modal/ModelInfos.js"></script>
+<script src="script/API-filme/modal_api/ModalController.js"></script>
+<script src="script/API-filme/modal_api/ModalViews.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+
+</html>

@@ -1,0 +1,42 @@
+/* NAVBAR */
+#nav-bar {
+    background-color: var(--fundo-opacit)
+}
+
+#nav-bar .menu {
+    color: var(--font-header);
+
+    font-weight: bold;
+
+    margin: 5px;
+}
+
+#nav-bar .menu:hover {
+    transform: scale(1.2);
+    color: var(--font-responsive);
+
+    transition: 0.9s;
+}
+
+#nav-bar button {
+    color: var(--branco);
+
+    background: var(--font-header);
+
+    border: none;
+
+    margin-right: 40px;
+}
+
+#nav-bar button:hover {
+    transform: scale(1.1);
+    background: var(--font-responsive);
+
+    transition: 0.9s;
+}
+
+#nav-bar a {
+    color: var(--branco);
+
+    text-decoration:none;
+}

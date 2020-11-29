@@ -1,0 +1,21 @@
+/*------------------------- FOOTER ------------------------------------------ */
+#footer {
+    background: var(--fundo-opacit);
+
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    text-align: center;
+
+    width: 100%;
+    height: 30px;
+    
+    bottom: 0;
+}
+
+#footer span {
+    color: var(--botoes);
+    
+    font-size: 12px;
+    font-weight: bold;
+}

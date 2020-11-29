@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Roboto', sans-serif;
+
+    color: var(--font-form);
+}
+
+:root {
+    --font-responsive: #c22532;
+    --font-header: #87151f;
+    --font-form: #87151f;
+    --botoes: #87151f;
+    --branco: white;
+    --cinza:  #d6d2d1;
+    --fundo-opacit: rgba(214, 210, 209, 0.7);
+    --preto: black;
+}
